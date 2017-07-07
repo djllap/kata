@@ -1,0 +1,26 @@
+<% if current_user %>
+	<%= react_component 'App', props = { 
+	    notebooks: @notebooks, 
+	    nav: @nav, 
+	    user: current_user
+	} %>
+<% else %>
+  <div class="banner container-fluid">
+    <h1>Welcome to FlexNotebook!</h1>
+  </div>
+  <div class="col-xs-12">
+    <p style="padding: 1em 2em 1em 2em;">
+      FlexNotebook is a martial arts notebook app designed to make building and organizing your martial arts notebook quickly and easily.  Each notebook has lists and techniques, and each technique can belong to any number of lists.  This makes finding the material you are looking for quick and seamless.  Adding new pages to your notebook is painless, and without the need to worry about formatting.
+    </p>
+    <%= image_tag("FlexNotebook.jpg", style: 'max-width: 80%; display: block; margin: auto;') %>
+    <p style="padding: 1em 2em 1em 2em;">
+      So what are you waiting for?  Create an account and begin building your notebook today!
+    </p>
+    <div class="col-xs-2 col-xs-offset-4">
+      <div class="btn btn-lg btn-raised btn-info ">
+        <%= link_to 'Create Account', new_user_registration_path, :style=> 'color: rgba(255, 255, 255, 0.84);' %>
+      </div>
+    </div>
+    
+  </div>
+<% end %>
