@@ -15,3 +15,5 @@ FlexNotebook is built on:
 * MySQL
 
 ![alt text](/app/assets/images/FlexNotebook.jpg "Screenshot")
+
+You navigate through your notebooks as well as create, edit, and delete notebooks, lists, and pages on the left hand navigation panel.  The technique panel displays the last technique selected in the navigation panel.
