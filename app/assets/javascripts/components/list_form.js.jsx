@@ -8,7 +8,6 @@ var ListForm = React.createClass({
     toggleModal = this.props.toggleModal;
     jumpToNotebooks = this.props.jumpToNotebooks;
     getNotebookLists = this.props.getNotebookLists;
-    console.log(page_ids);
 
     if (this.props.modalContent == "Create List") {
       $.ajax({

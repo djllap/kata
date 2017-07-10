@@ -40,8 +40,10 @@ var PageForm = React.createClass({
     if (this.props.modalContent == "Create Page") {
       defaultName = null;
       submit = "Create Technique";
+      defaultContent = null;
     } else if (this.props.modalContent == "Edit Page") {
       defaultName = this.props.page.name;
+      defaultContent = this.props.page.content;
       submit = "Update Technique";
     }
 
@@ -78,7 +80,8 @@ var PageForm = React.createClass({
             <div className="form-group">
               <label htmlFor="content" className="col-sm-2 control-label">Description</label>
               <div className="col-sm-10">
-                <textarea className="form-control" rows="5" id="content" ref="content"></textarea>
+                <textarea className="form-control" rows="5" id="content" ref="content" defaultValue={defaultContent}>
+                </textarea>
                 <span className="help-block">Write a detailed description of how to perform this technique</span>
 
               </div>
