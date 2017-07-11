@@ -57,6 +57,7 @@ var App = React.createClass({
     nav = {...this.state.nav};
     nav.notebook = notebook;
     this.setState({lists: lists, notebookLists: lists, notebookPages: pages, nav: nav});
+    this.jumpToNotebook(notebook);
   },
 
   selectList: function(pages, list) {

@@ -16,11 +16,13 @@
     <p style="padding: 1em 2em 1em 2em;">
       So what are you waiting for?  Create an account and begin building your notebook today!
     </p>
-    <div class="col-xs-2 col-xs-offset-4">
-      <div class="btn btn-lg btn-raised btn-info" style="margin-bottom: 4em;">
-        <%= link_to 'Create Account', new_user_registration_path, :style=> 'color: rgba(255, 255, 255, 0.84);' %>
+    <div class="col-xs-6 col-xs-offset-2" style="margin-bottom: 4em">
+      <div class="col-xs-6">
+        <%= link_to 'Create Account', new_user_registration_path, :style=> 'color: rgba(255, 255, 255, 0.84);', :class=> "btn btn-lg btn-raised btn-info" %>
+      </div>
+      <div class="col-xs-6">
+        <%= link_to 'Use Guest Account', guest_path, :style=> 'color: rgba(255, 255, 255, 0.84);', :class=> "btn btn-lg btn-raised btn-warning "%>
       </div>
     </div>
-    
   </div>
 <% end %>

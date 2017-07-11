@@ -27,7 +27,7 @@ var Breadcrumbs = React.createClass({
           className={(current == "crumbs3") ? "active" : ""}
         >
           {(current == "crumbs3") ? this.props.list.name : <a style={{cursor: "pointer"}}>{this.props.list.name}</a>}
-        </li>
+        </li>;
     }
 
     if (this.props.notebook) {
