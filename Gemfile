@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'dumpable'
+# Adds SQL Dump method too every resource
+
 gem 'devise'
 #complete user authenticate system
 
