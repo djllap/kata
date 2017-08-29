@@ -1,9 +1,5 @@
-<div class="col-md-10 col-md-offset-1">
-  <div class="panel panel-default" style="margin-top: 1.5em">
-    <div class="panel-body">
-      <h3>Your User account</h3>
-        <p>Email: <%= @user.email %></p>
-        <p"><%= link_to "View Your Notebooks", root_path %></p>
-    </div>
-  </div>
-</div>
+<%= react_component 'App', props = { 
+	notebooks: @notebooks, 
+	nav: @nav, 
+	user: @user
+} %>

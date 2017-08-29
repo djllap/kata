@@ -14,6 +14,7 @@ class NotebooksController < ApplicationController
   end
 
   def show
+
     @notebook = Notebook.find(params[:id])
     @lists = @notebook.lists.all
     @pages = @notebook.pages.all
@@ -49,6 +50,10 @@ class NotebooksController < ApplicationController
         render :json => @user.notebooks.all
       end
     end
+  end
+
+  def self.public
+    where("private == false")
   end
 
   def guest
@@ -91,5 +96,5 @@ private
   end
 
   def notebook_params
-    params.permit(:name, :user_id)
+    params.permit(:name, :user_id, :private)
   end
